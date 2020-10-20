@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+
+    <div id="mainScreen">
+        <div class="selector">
+            <div onclick="characterSelect('Character1')" class="fighter" id="fighter1">
+                <img src="img/p1/dk.png" alt="dk">
+                <p>Don King Kong</p>
+            </div>
+            <div onclick="characterSelect('Character2')" class="fighter" id="fighter1">
+                <img src="img/p1/kd.png" alt="kd">
+                <p>King Dedede</p>
+            </div>
+            <div onclick="characterSelect('Character3')" class="fighter" id="fighter1">
+                <img src="img/p1/Link.png" alt="Link">
+                <p>Link</p>
+            </div>
+            <div onclick="characterSelect('Character4')" class="fighter" id="fighter1">
+                <img src="img/p1/boy.png" alt="boy">
+                <p>Inkling</p>
+            </div>
+ 
+            </div>
+        </div>
+
+    
+         <div class="selectPlayer">
+            <h1 class="selectPlayerText">Select player</h1>
+         </div>
+
+
+         <div class="vsPlayers">
+            <div id="p1vs"></div>
+            <div class="vsTextDiv">
+                <p class="vsText">VS</p>
+                <button onclick="startGameClick()" class="startGameBtn">START</button>
+            </div>
+            <div id="p2vs"></div>
+         </div>
+    
+    </div>
+
+    <div id="fightScreen">
+        
+        <div class="p1Fighting">
+            <progress value="100" id="healthBarP1" max= "100"></progress>
+            <div id="imageP1"></div>
+            <button class="fightP1Btn" onclick="attack(0)">FIGHT!</button>
+        </div>
+        <div class="versus">VS</div>
+
+        <div class="p2Fighting">
+            <progress value="100" id="healthBarP2"  max= "100"></progress>
+            <div id="imageP2"></div>
+            <button class="fightP2Btn" onclick="attack(1)">FIGHT!</button>
+        </div>
+    </div>
+
+
+
+    <div id="winnerText">
+        <p id="theWinnerIs"></p>
+    </div>
+
+
+    
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
